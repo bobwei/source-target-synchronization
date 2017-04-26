@@ -24,7 +24,7 @@ currentState = [1, 2];
 ```json
 {
   "create": [5, 6],
-  "remove": [1, 2],
+  "delete": [1, 2],
   "update": [],
   "data": {
     "5": {

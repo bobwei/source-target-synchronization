@@ -21,8 +21,8 @@
   - If diff exists, push diff
 - When receive diff from other sources, merge diff into local source.
   - Merge Strategy:
-    - create => insert
-    - remove => delete
+    - create => create
+    - delete => delete
     - update => compare updatedTime, merge with the largest updatedTime
 
 
