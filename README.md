@@ -26,6 +26,20 @@
     - update => compare updatedTime, merge with the largest updatedTime
 
 
+## How to calculate diff ?
+
+- create:
+  - source - currentState
+  - ex: [1, 3, 4] - [1, 2], create = [3, 4]
+- delete:
+  - currentState - source
+  - ex: [1, 2] - [1, 3, 4], delete = [2]
+- update:
+  - Tn, Tn-1, find ids such that ( updatedTime >= Tn-1 ) && ( updatedTime <= Tn )
+  - ex: [{ id: 0, updatedTime: 0 }, { id: 1, updatedTime: 1 }, { id: 2, updatedTime: 2 }]
+  - Tn = 3, update = [2]
+
+
 ## Example
 
 We use snapshots at each time t to illustrate this algorithm, please checkout examples for further detail.
